@@ -20,8 +20,8 @@ contract TweetX is ERC1155, Ownable, Pausable, ERC1155Burnable, ERC1155Supply {
         _setURI(newuri);
     }
 
-    function setURI(string memory newuri, uint256 id) public onlyOwner {
-				_tokenURIs[id] = tokenURI;
+    function updateURI(string memory newuri, uint256 id) public onlyOwner {
+				_tokenURIs[id] = newuri;
     }
 
     function pause() public onlyOwner {
